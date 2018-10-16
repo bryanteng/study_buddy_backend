@@ -4,6 +4,7 @@ class CreateDocuments < ActiveRecord::Migration[5.2]
       t.jsonb :delta, default: [], array: true
       t.belongs_to :user
       t.belongs_to :category
+      t.string :title
       t.timestamps
     end
   end

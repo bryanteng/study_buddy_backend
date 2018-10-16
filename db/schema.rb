@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_10_12_183315) do
     t.jsonb "delta", default: [], array: true
     t.bigint "user_id"
     t.bigint "category_id"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_documents_on_category_id"
