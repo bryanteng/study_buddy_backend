@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :subcategories
+  resources :notecards
   resources :categories
   resources :documents
   resources :users

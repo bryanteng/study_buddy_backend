@@ -22,6 +22,7 @@ def index
   end
 
   def custom_create
+
     @category = Category.find_or_create_by(name: params[:name])
     @document = Document.new(document_params)
     @document.category_id = @category.id
@@ -31,7 +32,6 @@ def index
     else
       render json: {errors: @document.errors.full_messages}, status: :unprocessable_entity
     end
-
   end
 
   def update
