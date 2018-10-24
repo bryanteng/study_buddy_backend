@@ -48,7 +48,11 @@ def index
   # come back to make logic changes
   def destroy
     @document = Document.find(params[:id])
-    @document.destroy
+    if @document.destroy
+      render json: @document, status: :accepted
+    else
+      render json: {errors: @document.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
 
