@@ -37,7 +37,11 @@ class NotecardsController < ApplicationController
 
   def destroy
     @notecard = Notecard.find(params[:id])
-    @notecard.destroy
+    if @notecard.destroy
+      render json: @notecard, status: :accepted
+    else
+      render json: {errors: @notecard.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   private
