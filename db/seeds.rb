@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-bryan = User.create(username: "bryan")
+bryan = User.create(username: "bryan", password: "123")
 math = Category.create(name: "math")
 science = Category.create(name: "science")
 test_doc = Document.create(user_id: bryan.id, category_id: math.id, title: "algebra")

@@ -8,4 +8,7 @@ Rails.application.routes.draw do
 
   post '/documents-and-category', to: 'documents#custom_create'
 
+  post "/login", to: "sessions#login"
+  get "/persist", to: "sessions#persist"
+
 end
