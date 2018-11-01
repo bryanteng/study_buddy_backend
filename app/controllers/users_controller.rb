@@ -11,7 +11,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    byebug
     @user = User.new(username: params[:username], password: params[:password])
     if @user.save
       render json: @user, status: :accepted
