@@ -2,6 +2,10 @@
 
 *Study Buddy*, a note taking app from a student for students.
 
+![Image](notesImage.png)
+![Image](graphImage.png)
+![Image](notecardImage.png)
+
 ## Application Features
 - User can write notes on a document and change the styling of the text as the wish, and persist the changes.
 
